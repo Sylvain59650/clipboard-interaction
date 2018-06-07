@@ -77,7 +77,7 @@ a {
 }
 
 .signature,
-.arg,
+.args,
 .return,
 .example {
   font-weight: bolder;
@@ -92,19 +92,33 @@ a {
 }
 
 .signature:before,
-.arg:before,
+.args:before,
 .return:before,
 .example:before {
   clear: left;
   content: '\A';
 }
 
-.arg {
+.args {
   background-color: darksalmon;
 }
 
-.arg:before {
+.args:before {
   content: "Arguments"
+}
+
+.arg {
+  text-decoration: underline;
+  width: 100px;
+  background-color: bisque;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 40px;
+}
+
+.arg-description {
+  display: inline;
 }
 
 .return:before {

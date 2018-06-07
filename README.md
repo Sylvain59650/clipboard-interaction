@@ -26,7 +26,8 @@ copy of the text in the clipboard following a user interaction (click, focus, ..
 
 
 - characteristics 
-  - work on IE11, Firefox & Chrome 
+  - work on IE9+, Firefox 60+ & Chrome 66+, no tests done on other browsers or older versions,
+- you can <a href="https://sylvain59650.github.io/clipboard-interaction/demo/index.html">test online</a> with your old browser
 
 ## Installation
 
@@ -36,6 +37,9 @@ or
 
     yarn add clipboard-interaction --save
 
+or
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard-interaction/distrib/clipboard-interaction.min.js"></script>
 
 ## prerequisites for browser
 
