@@ -1,6 +1,6 @@
 {
   "name": "clipboard-interaction",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Copy text to clipboard",
   "main": "distrib/clipboard-interaction.min.js",
   "scripts": {
