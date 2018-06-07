@@ -28,8 +28,8 @@
     }
 
     function copy() {
-      var source = document.querySelector("#source");
-      var target = document.querySelector("#target");
+      var source = document.getElementById("source");
+      var target = document.getElementById("target");
       Clipboard.copy(source.value, function() {
           target.value = "";
           target.focus();

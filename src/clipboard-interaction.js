@@ -11,7 +11,7 @@ window.Clipboard.copy = function(text, onsuccess, onerror) {
       }
     });
   } else {
-    var elem = document.querySelector("#__clipboard");
+    var elem = document.getElementById("__clipboard");
     if (elem === null) {
       elem = document.createElement("input");
       elem.id = "__clipboard";
