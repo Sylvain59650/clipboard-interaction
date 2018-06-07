@@ -1,6 +1,6 @@
 {
   "name": "clipboard-interaction",
-  "version": "0.0.1",
+  "version": "0.8.0",
   "description": "Copy text to clipboard",
   "main": "distrib/clipboard-interaction.min.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Sylvain59650/clipboard-interaction.git/issues"
   },
-  "homepage": "https://github.com/Sylvain59650/clipboard-interaction.git#readme",
+  "homepage": "https://sylvain59650.github.io/clipboard-interaction/",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-remove-comments": "^2.0.0",
