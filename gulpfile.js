@@ -18,9 +18,9 @@ gulp.task("clipboardjs.min.js", () => {
     .pipe(concat("clipboardjs.min.js"))
     .pipe(babel({
       presets: ["es2015"],
-      compact: false,
+      compact: true,
       comments: false,
-      minified: false
+      minified: true
     }))
     .pipe(gulp.dest(chemins.distrib))
 });
