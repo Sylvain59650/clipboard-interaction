@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+  <link rel="stylesheet" type="text/css" href="../3parts/iziToast.min.css?v=130c">
+  <script src="../3parts/iziToast.min.js?v=130c" type="text/javascript"></script>
+
+  <script src="modules/clipboard-interaction/distrib/clipboard-interaction.min.js"></script>
+</head>
+
+<body>
+
+  <script>
+    function trace(msg) {
+      iziToast.success({
+        title: "Event",
+        message: msg,
+        timeout: 1500,
+        backgrouncColor: "green"
+      });
+    }
+
+    function copy() {
+      var source = document.querySelector("#source");
+      var target = document.querySelector("#target");
+      Clipboard.copy(source.value, function() {
+          target.value = "";
+          target.focus();
+          trace("copied !");
+        },
+        function() {
+          trace("ko");
+        });
+    }
+  </script>
+  <input id="source" type="text" placeholder="write something here" />
+  <button onclick="copy()">Copy to clipboard</button>
+
+  <input id="target" type="text" placeholder="Ctrl+V to paste from clipboard" />
+</body>
+
+</html>

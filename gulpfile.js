@@ -6,16 +6,16 @@ const watch = require("gulp-watch");
 const chemins = {
   sources: "./src/",
   distrib: "./distrib/",
-  demo: "./docs/node_modules/clipboardjs/"
+  demo: "./docs/modules/clipboard-interaction/distrib/"
 };
 
 
 
-gulp.task("clipboardjs.min.js", () => {
+gulp.task("clipboard-interaction.min.js", () => {
   return gulp.src([
       "src/**.js"
     ])
-    .pipe(concat("clipboardjs.min.js"))
+    .pipe(concat("clipboard-interaction.min.js"))
     .pipe(babel({
       presets: ["es2015"],
       compact: true,
@@ -29,7 +29,7 @@ gulp.task("release", () => {
   return gulp.src([
       "src/**.js"
     ])
-    .pipe(concat("clipboardjs.min.js"))
+    .pipe(concat("clipboard-interaction.min.js"))
     .pipe(babel({
       presets: ["es2015"],
       compact: true,
@@ -43,7 +43,7 @@ gulp.task("demo", () => {
   return gulp.src([
       "src/**.js"
     ])
-    .pipe(concat("clipboardjs.min.js"))
+    .pipe(concat("clipboard-interaction.min.js"))
     .pipe(babel({
       presets: ["es2015"],
       compact: false,
@@ -53,9 +53,9 @@ gulp.task("demo", () => {
     .pipe(gulp.dest(chemins.demo))
 });
 
-gulp.task("watch:clipboardjs.min.js", function() {
+gulp.task("watch:clipboard-interaction.min.js", function() {
   watch("./src/**.js", function() {
-    gulp.run("clipboardjs.min.js");
+    gulp.run("clipboard-interaction.min.js");
   });
 });
 
@@ -63,9 +63,9 @@ gulp.task("watch:clipboardjs.min.js", function() {
 
 
 
-gulp.task("default", ["clipboardjs.min.js", "demo", "watch"]);
+gulp.task("default", ["clipboard-interaction.min.js", "demo"]);
 
 
 gulp.task("all", ["default"]);
 
-gulp.task("watch", ["watch:clipboardjs.min.js"]);
+gulp.task("watch", ["watch:clipboard-interaction.min.js"]);

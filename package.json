@@ -1,14 +1,14 @@
 {
-  "name": "clipboardjs",
+  "name": "clipboard-interaction",
   "version": "0.0.1",
   "description": "Copy text to clipboard",
-  "main": "distrib/clipboardjs.min.js",
+  "main": "distrib/clipboard-interaction.min.js",
   "scripts": {
     "test": "exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sylvain59650/clipboardjs.git"
+    "url": "git+https://github.com/Sylvain59650/clipboard-interaction.git"
   },
   "keywords": [
     "clipboard",
@@ -18,9 +18,9 @@
   "author": "Sylvain LONGEPEE",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Sylvain59650/clipboardjs/issues"
+    "url": "https://github.com/Sylvain59650/clipboard-interaction.git/issues"
   },
-  "homepage": "https://github.com/Sylvain59650/clipboardjs#readme",
+  "homepage": "https://github.com/Sylvain59650/clipboard-interaction.git#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-remove-comments": "^2.0.0",
