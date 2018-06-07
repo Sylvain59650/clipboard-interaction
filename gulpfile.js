@@ -6,7 +6,7 @@ const watch = require("gulp-watch");
 const chemins = {
   sources: "./src/",
   distrib: "./distrib/",
-  demo: "./docs/modules/clipboard-interaction/distrib/"
+  demo: "./docs/demo/modules/clipboard-interaction/distrib/"
 };
 
 

@@ -23,6 +23,9 @@ window.Clipboard.copy = function(text, onsuccess, onerror) {
     elem.setAttribute("value", text);
     elem.select();
     try {
+      if (text === "") {
+        throw TypeError("Clipboard:nothing to copy");
+      }
       var ret = document.execCommand("copy");
       if (ret) {
         if (onsuccess) {

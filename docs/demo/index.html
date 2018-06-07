@@ -27,6 +27,15 @@
       });
     }
 
+    function error(msg) {
+      iziToast.error({
+        title: "Error",
+        message: msg,
+        timeout: 2500,
+        backgrouncColor: "red"
+      });
+    }
+
     function copy() {
       var source = document.getElementById("source");
       var target = document.getElementById("target");
@@ -35,8 +44,8 @@
           target.focus();
           trace("copied !");
         },
-        function() {
-          trace("ko");
+        function(err, msg) {
+          error(err.message);
         });
     }
   </script>
