@@ -1,6 +1,6 @@
 {
   "name": "clipboard-interaction",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Copy text to clipboard",
   "main": "distrib/clipboard-interaction.min.js",
   "scripts": {
@@ -15,7 +15,13 @@
     "copy",
     "text"
   ],
-  "author": "Sylvain LONGEPEE",
+  "author": "sylvain59",
+  "maintainers": [
+    {
+      "name": "sylvain59",
+      "email": "slongepee@laposte.net"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Sylvain59650/clipboard-interaction.git/issues"

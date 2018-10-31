@@ -1,42 +1,62 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="../css/demo.css">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link href="https://sylvain59650.github.io/demonstrator/css/theme1.css" type="text/css" rel="stylesheet" />
+
 </head>
 
 <body>
-  <div class="breadcrumb">
-    <a href="https://www.npmjs.com/package/clipboard-interaction" title="NPM">
-      <img src="../img/npm.png" height="32"></a>
-    <a href="https://github.com/Sylvain59650/clipboard-interaction" title="GitHub"><img src="https://github.com/favicon.ico" height="32" /></a>
-  </div>
+  <div class="container">
+    <div>
+      <a href="https://www.npmjs.com/package/clipboard-interaction" title="NPM">
+        <img src="https://sylvain59650.github.io/demonstrator/img/npm.png" height="32"></a>
+      <a href="https://github.com/Sylvain59650/clipboard-interaction" title="GitHub"><img src="https://github.com/favicon.ico" height="32" /></a>
+    </div>
 
-  <h1>clipboard-interaction</h1>
+    <h1>clipboard-interaction</h1>
 
-  <h1> prerequisites</h1>
+    <h1> prerequisites</h1>
 
-  <h2> for browser</h2>
-  <code><xmp><script src="node_modules/clipboard-interaction/distrib/clipboard-interaction.min.js"></script></xmp></code>
-  <h1> Methods</h1>
-  <h2> copy</h2>
-  <p class="signature" />
-  <p class="code">copy(text, onsuccess, onerror)</p>
-  <br/>
-  <ul class="args">
-    <li>
-      <p class="arg">text</p>
-      <p class="arg-description">text to copy to clipboard</p>
-    </li>
-    <li>
-      <p class="arg">onsuccess</p>
-      <p class="arg-description">function called when text copied</p>
-    </li>
-    <li>
-      <p class="arg">onerror</p>
-      <p class="arg-description">function called when error</p>
-    </li>
-  </ul>
+    <h2> for browser</h2>
+    <code><xmp>
+    <script src="node_modules/clipboard-interaction/distrib/clipboard-interaction.min.js"></script>
+  </xmp></code>
+
+    <h1> Methods</h1>
+
+    <article>
+      <h2> copy</h2>
+      <div class="signature">
+        <p>copy(<i>text</i>, <i>onsuccess</i>, <i>onerror</i>)</p>
+      </div>
+      <div class="arg">
+        <p><i>text</i>text to copy to clipboard</p>
+        <p><i>onsuccess</i>function called when text copied</p>
+        <p><i>onerror</i>function called when error</p>
+      </div>
+      <p class="example" />
+      <code><xmp>
+<input id="source" type="text" placeholder="write something here" />
+<button onclick="copy()">Copy to clipboard</button>
+
+<input id="target" type="text" placeholder="Ctrl+V to paste from clipboard" />
+
+<script>
+function copy() {
+  var source = document.getElementById("source");
+  var target = document.getElementById("target");
+  Clipboard.copy(source.value, function() {
+      target.value = "";
+      target.focus();
+      alert("copied !");
+    },
+    function(err, msg) {
+      alert(err.message);
+    });
+}
+</script>
+   </xmp></code>
+    </article>
 </body>
 
 </html>
